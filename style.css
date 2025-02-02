@@ -2,7 +2,7 @@ body {
     font-family: 'Georgia', serif; 
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; 
+    background-color: #c9c9c9; 
     color: #333; 
     line-height: 1.8; 
 }
@@ -32,7 +32,7 @@ header .title-container {
     position: relative;
     z-index: 2; 
     background-color: rgba(0, 0, 0, 0.7); 
-    padding: 20px;
+    padding: 15px 60px 15px;
     border-radius: 8px;
     display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
@@ -108,21 +108,32 @@ header .title-container {
 .main-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #5a4a3b;
     font-family: 'Playfair Display', serif;
     text-align: center; 
 }
 
-p {
+.main-border {
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px auto;
+    width: 50%;
+}
+
+.main-text {
+    text-align: justify;
+    margin-inline: 70px;
+    margin-top: 45px;
     font-size: 1.2rem;
     margin-bottom: 15px;
     line-height: 1.8;
     color: #555; 
-    text-indent: 20px;
+    text-indent: 70px;
 }
 
 .main-img {
     margin-top: 50px;
+    margin-bottom: 25px;
     width: 80vw; 
     max-width: 1200px; 
     height: auto; 
@@ -136,6 +147,16 @@ p {
 .imgtext {
     text-align: center;
     font-size: 1rem;
+    color: #333;
+    font-family: 'Courier New', monospace;
+}
+
+.photo-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #5a4a3b;
+    font-family: 'Playfair Display', serif;
+    text-align: center; 
 }
 
 .gallery {
@@ -151,7 +172,7 @@ p {
 .photo-pair-title {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #5a4a3b; 
+    color: #333; 
     font-family: 'Playfair Display', serif;
     text-align: center; 
 }
@@ -193,10 +214,12 @@ p {
 }
 
 .photo-description {
-    text-align: center;
-    font-size: 1rem;
-    color: #555;
-    margin-top: 10px;
+    font-size: 1.2rem; 
+    color: #555; 
+    text-align: center; 
+    margin-top: 20px; 
+    line-height: 1.8; 
+    padding: 0 20px;
 }
 
 .modal {
@@ -295,6 +318,11 @@ p {
     font-family: 'Courier New', monospace;
 }
 
+.footer__author {
+    font-size: 1em;
+    color: #626262;
+}
+
 .footer__content {
     max-width: 800px;
     margin: 0 auto;
@@ -303,9 +331,10 @@ p {
 
 .footer__year {
     color: #ccc;
+    font-size: 1em;
 }
 
 .footer__info {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #aaa;
 }
