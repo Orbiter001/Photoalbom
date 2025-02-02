@@ -34,14 +34,14 @@ header .title-container {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 8px;
-    display: inline-block; 
+    display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .title {
     font-size: 2rem;
     margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
     font-family: 'Playfair Display', serif;
     color: #ffffff; 
 }
@@ -80,8 +80,8 @@ header .title-container {
     text-decoration: none;
     font-weight: bold;
     font-family: 'Courier New', monospace; 
-    border-radius: 8px;
-    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    border: 2px solid #ccc;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
@@ -89,12 +89,12 @@ header .title-container {
 .menu-button:hover {
     background: linear-gradient(to bottom, #e0e0e0, #c9c9c9); 
     transform: translateY(-4px); 
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .content-box {
     background-color: #fff; 
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
@@ -118,25 +118,7 @@ p {
     margin-bottom: 15px;
     line-height: 1.8;
     color: #555; 
-    text-indent: 20px; 
-}
-
-p strong {
-    color: #333; 
-}
-
-p em {
-    color: #777; 
-}
-
-p a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-p a:hover {
-    text-decoration: underline;
+    text-indent: 20px;
 }
 
 .main-img {
@@ -162,10 +144,14 @@ p a:hover {
     gap: 20px;
 }
 
-.phototext {
-    font-size: 2.5rem;
+.photo-group {
+    margin-bottom: 40px;
+}
+
+.photo-pair-title {
+    font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #5a4a3b; 
     font-family: 'Playfair Display', serif;
     text-align: center; 
 }
@@ -173,7 +159,7 @@ p a:hover {
 .photo-pair {
     display: flex;
     justify-content: space-between; 
-    gap: 20px;
+    gap: 20px; 
 }
 
 .photo-card {
@@ -203,6 +189,101 @@ p a:hover {
     padding: 10px;
     font-size: 1rem;
     color: #333;
+    font-family: 'Courier New', monospace;
+}
+
+.photo-description {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    overflow: auto; 
+}
+
+.modal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+    z-index: -1;
+}
+
+.modal.show::before {
+    opacity: 1;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    animation: zoom-in 0.5s ease-in-out; 
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8); 
+        opacity: 0; 
+    }
+    to {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+.modal.hide .modal-content {
+    animation: fade-out 0.3s ease-in-out forwards; 
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1; 
+    }
+    to {
+        opacity: 0; 
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.modal-caption {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff; 
+    margin-top: 10px; 
     font-family: 'Courier New', monospace;
 }
 
