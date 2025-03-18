@@ -337,3 +337,43 @@ header .title-container {
     font-size: 0.8em;
     color: #aaa;
 }
+
+@media (max-width: 768px) {
+    .photo-pair {
+        flex-direction: column; /* Фотографии будут располагаться одна под другой */
+    }
+    
+    .main-img, .photo-card__image {
+        width: 100%; /* Фотографии займут всю ширину экрана */
+        height: auto;
+    }
+    
+    .modal-caption {
+        font-size: 1rem; /* Уменьшенный текст в модальном окне */
+    }
+    
+    .main-text {
+        font-size: 1rem; /* Уменьшенный основной текст */
+        text-indent: 0; /* Убираем отступ первой строки */
+        margin-inline: 15px; /* Меньшие отступы по бокам */
+    }
+    
+    .menu-button {
+        padding: 8px 20px; /* Меньшие кнопки меню */
+        font-size: 1rem;
+    }
+    
+    .content-box {
+        padding: 30px; /* Меньшие отступы внутри контента */
+    }
+}
+
+/* Дополнительные улучшения */
+.modal-content {
+    max-width: 95%; /* Большая ширина модального окна на маленьких экранах */
+    max-height: 85%;
+}
+
+.photo-description {
+    font-size: 1rem; /* Уменьшенный текст описания */
+}
