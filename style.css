@@ -98,7 +98,7 @@ header .title-container {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     max-width: 1200px;
-    padding: 30px;
+    padding: 60px;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -207,7 +207,7 @@ header .title-container {
 .photo-card__caption {
     text-align: center;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #333;
     font-family: 'Courier New', monospace;
 }
@@ -303,7 +303,7 @@ header .title-container {
 
 .modal-caption {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #fff; 
     margin-top: 10px; 
     font-family: 'Courier New', monospace;
